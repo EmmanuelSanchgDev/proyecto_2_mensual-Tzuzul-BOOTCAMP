@@ -1,7 +1,7 @@
 :root {
     --bg-body: #181818;
     --bg-bar: #212121;
-    --bg-header: #202020;
+    --bg-header: #202020ee;
     --bg-button: #323232;
     --bg-tag: #ffffff1a;
     --size-box-item: 7.2rem;
@@ -148,6 +148,7 @@ span.material-symbols-outlined {
     background-color: transparent;
     border-radius: 50%;
     transition: 0.2s;
+    cursor: pointer;
 
 }
 
@@ -307,21 +308,20 @@ span.material-symbols-outlined {
 
 .card {
     width: 23%;
-    height: 300px;
+    /* height: 300px; */
     padding: 1rem;
-    border: 0.1rem solid black;
+    /* border: 0.1rem solid black; */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    justify-content: space-between;
     color: var(--color-bar);
     margin-bottom: 2rem;
 }
 
 .card__conteiner-image {
     width: 100%;
-    height: 50%;
+    height: auto;
     overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 .card__image {
@@ -329,10 +329,11 @@ span.material-symbols-outlined {
 }
 
 .card__conteiner-description {
-    height: 40%;
+    height: auto;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    padding: 1rem 0;
 }
 .card__conteiner-image-channel {
     width: 15%;
@@ -340,9 +341,16 @@ span.material-symbols-outlined {
 .image__channel {
     border-radius: 50%;
 }
+.card__link-video {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-bar);
+}
 .card__description .title {
     font-size: var(--font-size-medium);
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 .name-channel {
     font-size: var(--font-size-small);
@@ -350,6 +358,13 @@ span.material-symbols-outlined {
 }
 .name-channel .name {
     font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+.name-channel .name:hover {
+    font-weight: 600;
 }
 
 /*-----------------------*/
@@ -376,9 +391,7 @@ span.material-symbols-outlined {
     background-color: var(--bg-bar);
     border: 0.1rem solid var(--bg-button);
 }
-.conteiner-publicaciones img {
-    /* width: 30px; */
-}
+
 .publicacion__conteiner-top {
     display: flex;
     align-items: center;
