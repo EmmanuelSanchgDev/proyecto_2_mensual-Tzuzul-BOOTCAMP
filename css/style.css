@@ -65,6 +65,7 @@ span.material-symbols-outlined {
     background-color: var(--bg-header);
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .header__top {
@@ -123,6 +124,10 @@ span.material-symbols-outlined {
     border-radius: 50%;
     background-color: var(--bg-body);
     transition: 0.2s;
+    position: relative;
+}
+.button-microfono:hover > .modal-title {
+    display: flex;
 }
 .button-microfono > span:first-child {
     display: flex;
