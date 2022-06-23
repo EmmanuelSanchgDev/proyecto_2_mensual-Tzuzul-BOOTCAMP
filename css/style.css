@@ -175,8 +175,10 @@ span.material-symbols-outlined {
     display: flex;
     max-width: 92%;
     margin: 0 auto;
-    /* max-width: 127.1rem; */
-    overflow: hidden;
+    overflow: auto;
+}
+.nav__list-tag::-webkit-scrollbar {
+    display: none;
 }
 .nav-tag__items {
     list-style-type: none;
