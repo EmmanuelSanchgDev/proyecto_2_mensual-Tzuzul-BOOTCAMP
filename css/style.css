@@ -121,8 +121,8 @@ span.material-symbols-outlined {
 .button-microfono {
     width: 4rem;
     border-radius: 50%;
-    background-color: var(--bg-black);
-    
+    background-color: var(--bg-body);
+    transition: 0.2s;
 }
 .button-microfono > span:first-child {
     display: flex;
