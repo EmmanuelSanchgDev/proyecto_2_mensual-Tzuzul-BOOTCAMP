@@ -250,7 +250,7 @@ span.material-symbols-outlined {
     border-radius: 50%;
     transition: 0.2s;
 }
-
+.accion:active,
 .user__items:active,
 .link__menu:active {
     background-color: var(--color-action);
@@ -321,7 +321,7 @@ span.material-symbols-outlined {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .card__image {
@@ -350,7 +350,13 @@ span.material-symbols-outlined {
 .card__description .title {
     font-size: var(--font-size-medium);
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 .name-channel {
     font-size: var(--font-size-small);
