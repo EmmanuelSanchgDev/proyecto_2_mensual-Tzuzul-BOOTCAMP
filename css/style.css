@@ -175,7 +175,10 @@ span.material-symbols-outlined {
 }
 .user__items:hover .modal-title{
     display: flex;
-} 
+}
+.user__items:active .modal-title {
+    display: none;
+}
 
 .user__image {
     object-fit: cover;
