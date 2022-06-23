@@ -330,13 +330,20 @@ span.material-symbols-outlined {
 
 .card {
     width: 23%;
-    /* height: 300px; */
+    height: 270px;
     padding: 1rem;
     /* border: 0.1rem solid black; */
     display: flex;
     flex-direction: column;
     color: var(--color-bar);
     margin-bottom: 2rem;
+    transition: 3s;
+    /* position: relative;
+    z-index: -1; */
+}
+
+.card:hover {
+    transform: scale(120%);
 }
 
 .card__conteiner-image {
@@ -344,10 +351,20 @@ span.material-symbols-outlined {
     height: auto;
     overflow: hidden;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: -1;
 }
 
 .card__image {
     object-fit: cover;
+}
+.modal-video {
+    width: 90%;
+    top: initial;
+    bottom: 0;
+}
+.card__image:hover + .modal-title{
+    display: flex;
 }
 
 .card__conteiner-description {
