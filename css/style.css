@@ -4,8 +4,9 @@
     --bg-header: #212121e1;
     --bg-button: #323232;
 
-    --accion-hover: #4F4D4E;
+    --accion-hover: #4f4d4e;
     --accion-hover-2: #464444;
+    --accion-hover-tags: #ffffff33;
     --bg-item: #ffffff1a;
 
     --font-size-small: 1rem;
@@ -17,6 +18,7 @@
     --size-image: 2.4rem;
     --size-bar-lef: 7rem;
     --size-cuadrado: 4rem;
+    --size-scroll-bar: 1.7rem;
 
     --transition-time: 0.3s;
 
@@ -41,6 +43,8 @@ body {
     grid-template-areas: 
         "menu-left header"
         "menu-left main";
+
+    height: 500vh;
 }
 
 .header-top__logo,
@@ -55,8 +59,8 @@ img {
 .conteiner-header {
     grid-area: header;
     height: 12rem;
-    padding:  0 2ch;
     background-color: var(--bg-header);
+    max-width: calc(100vw - (var(--size-bar-lef) + var(--size-scroll-bar)));
 }
 
 /* header top */
@@ -65,6 +69,7 @@ img {
     align-items: center;
     justify-content: space-between;
     height: 50%;
+    padding:  0 2ch;
 }
 
 .header-top__conteiner-logo {
@@ -95,10 +100,6 @@ img {
     border: 0.1rem solid var(--accion-hover);
     color: var(--font-colo-white);
 }
-
-/* .header-top-form__bar-search ::placeholder {
-    font-size: 1.8rem;
-} */
 
 .header-top-form__bar-search:focus {
     outline: 0.1rem solid rgb(19, 101, 133);
@@ -148,14 +149,51 @@ button.header-top-form__button-microphone {
 /* header bottom */
 .header__bottom {
     height: 50%;
+    border-top: 0.1rem solid var(--accion-hover);
+    border-bottom: 0.1rem solid var(--accion-hover);
 }
 
 .header__bottom li {
     list-style-type: none;
 }
 
+.header__bottom a {
+    text-decoration: none;
+    color: var(--font-colo-white);
+    text-transform: capitalize;
+    font-size: var(--font-size-large);
+}
+
 .header-bottom__list-tags {
+    height: 100%;
     display: flex;
+    align-items: center;
+    overflow: auto;
+    padding-right: 1ch;
+}
+
+.header-bottom__list-tags::-webkit-scrollbar {
+    display: none;
+}
+
+
+.header-buttom__tags-items {
+    margin-left: 1ch;
+}
+
+.header-buttom__tags-links {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    padding: 0.5ch 1ch;
+    width: max-content;
+    border: 0.1rem solid var(--accion-hover);
+    background-color: var(--accion-hover);
+    border-radius: 1.2rem;
+}
+
+.header-buttom__tags-links:hover {
+    background-color: var(--accion-hover-2);
 }
 
 
@@ -169,13 +207,15 @@ button.header-top-form__button-microphone {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: sticky;
+    top: 0;
     background-color: var(--bg-marco);
 }
 
 .conteiner-menu-left a {
     text-decoration: none;
     color: var(--font-colo-white);
+    text-transform: capitalize;
 }
 
 .menu-desplegable {
@@ -184,8 +224,6 @@ button.header-top-form__button-microphone {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    top: 0;
     /* z-index: 10; */
 }
 
