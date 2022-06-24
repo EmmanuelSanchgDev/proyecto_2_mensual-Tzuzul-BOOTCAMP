@@ -3,6 +3,7 @@
     --bg-marco: #212121;
     --bg-header: #212121e1;
     --bg-button: #323232;
+    --bg-communidad-card: #212121;
 
     --accion-hover: #4f4d4e;
     --accion-hover-2: #464444;
@@ -45,8 +46,6 @@ body {
     grid-template-areas: 
         "menu-left header"
         "menu-left main";
-
-    /* height: 500vh; */
 }
 
 img {
@@ -130,6 +129,7 @@ button.header-top-form__button-microphone {
 
 .header-top__conteiner-buttons-user {
     width: 15%;
+    min-width: 16rem;
     max-width: 25rem;
     display: flex;
     justify-content: space-evenly;
@@ -277,16 +277,19 @@ button.header-top-form__button-microphone {
     grid-area: main;
     padding: 2ch;
     display: flex;
-    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 1rem 1rem;
+    gap: 1.2rem 1rem;
     justify-content: space-between;
     color: var(--font-colo-white);
 }
 
 .card {
     width: 24%;
-    height: 25rem;
+    /* height: 25rem; */
+}
+
+.card__conteiner-mini {
+    margin-bottom: 1rem;
 }
 
 .card__conteiner-description-top {
@@ -344,8 +347,74 @@ button.header-top-form__button-microphone {
     font-weight: 900;
 }
 
+/*comunidad*/
+.conteiner__communidad {
+    width: 100%;
+    padding-bottom: 2ch;
+    border-top: 0.5rem solid var(--accion-hover);
+    border-bottom: 0.5rem solid var(--accion-hover);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
 
+.communidad__title {
+    width: 100%;
+    justify-self: flex-start;
+    padding: 2ch 0;
+    padding-left: 2ch;
+}
 
+.communidad__card {
+    width: 30%;
+    height: 20rem;
+    padding: 1ch;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-communidad-card);
+}
+
+.communidad__top {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-medium);
+}
+
+.communidad__conteiner-image-channel {
+    width: var(--size-cuadrado);
+    height: var(--size-cuadrado);
+}
+
+.communidad__image-channel {
+    border-radius: 50%;
+}
+
+.communidad__center {
+    display: flex;
+    align-items: center;
+    height: 80%;
+}
+
+.communidad__conteiner-image-publicacion {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.communidad__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.communidad-bottom__left,
+.communidad-bottom__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
 
 
 /*iconos*/
