@@ -279,28 +279,28 @@ button.header-top-form__button-microphone {
     padding: 2ch;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     color: var(--font-colo-white);
 }
 
-.conteiner-videos {
+.row-videos {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1%;
+    gap: 1% ;
+    /* margin-bottom: 2rem; */
 }
 
 .card {
     width: 24%;
-    min-width: 36rem;
+    /* min-width: 36rem; */
     /* height: 25rem; */
 }
 
 .card__conteiner-mini {
     width: 100%;
     margin-bottom: 1rem;
-    background-color: red;
 }
 
 .card__mini {
@@ -329,8 +329,7 @@ button.header-top-form__button-microphone {
 .card__title {
     font-size: var(--font-size-large);
     height: 4ch;
-    width: var(--size-title-video);
-    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
 
     max-width: 100%;
     -webkit-line-clamp: 2;
@@ -345,10 +344,10 @@ button.header-top-form__button-microphone {
     color: var(--font-colo-white);
 }
 
-.card__conteiner-description-bottom {
+.card__description-text {
     font-size: var(--font-size-medium);
-    padding-left: var(--size-cuadrado);
-    
+    width: 75%;
+    margin-left: 0.5rem;
 }
 
 .name-channel {
