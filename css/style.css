@@ -437,15 +437,23 @@ button.header-top-form__button-microphone {
 
 /* modals */
 
-.menu-desplegable__modal {
+.body-modal-left {
+    background-color: var(--bg-header);
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
+}
+
+.menu-desplegable__modal {
 
     width: 250px;
     height: 100vh;
     background-color: var(--bg-marco);
     overflow: auto;
+
 }
 
 .menu-desplegable__modal::-webkit-scrollbar {
@@ -458,9 +466,9 @@ button.header-top-form__button-microphone {
 }
 
 .menu-desplegable__header {
-    width: max-content;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     position: sticky;
     top: 0;
@@ -517,7 +525,13 @@ button.header-top-form__button-microphone {
     font-size: var(--font-size-large);
 }
 
+.body-modal-left:target {
+    display: flex;
+}
 
+.exit-modal {
+    display: block;
+}
 
 
 
