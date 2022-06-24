@@ -62,6 +62,8 @@ img {
     height: 12rem;
     background-color: var(--bg-header);
     max-width: calc(100vw - (var(--size-bar-lef) + var(--size-scroll-bar)));
+    position: sticky;
+    top: 0;
 }
 
 /* header top */
