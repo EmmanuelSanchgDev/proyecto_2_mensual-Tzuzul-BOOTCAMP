@@ -9,7 +9,7 @@
     --accion-hover-2: #464444;
     --accion-hover-tags: #ffffff33;
     --bg-item: #ffffff1a;
-
+    
     --font-size-small: 1rem;
     --font-size-medium: 1.2rem;
     --font-size-large: 1.4rem;
@@ -23,9 +23,9 @@
     --size-scroll-bar: 1.7rem;
     --size-title-video: 75%;
     --ssize-subtitle-video: 70%;
-
+    
     --transition-time: 0.3s;
-
+    
 }
 * {
     box-sizing: border-box;
@@ -46,13 +46,17 @@ body {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
-        "menu-left header"
+    "menu-left header"
         "menu-left main";
 }
 
 img {
     max-width: 100%;
     object-fit: cover;
+}
+
+.font-color {
+    color: var(--font-color-white);
 }
 
 /*inicio de estilos*/
@@ -444,14 +448,14 @@ button.header-top-form__button-microphone {
 /* modals */
 
 .body-modal-left {
-    background-color: var(--bg-header);
+    background-color: #474747c2;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -100vw;
     display: flex;
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
 .menu-desplegable__modal {
@@ -544,6 +548,26 @@ button.header-top-form__button-microphone {
     cursor: default;
 }
 
+[type="checkbox"] {
+    display: none;
+}
+
+.modal__mas-opciones > a.opcions__links {
+    display: none;
+}
+
+.playlist:checked ~ a.opcions__links {
+    display: flex;
+}
+
+.subs:checked ~ a.opcions__links {
+    display: flex;
+}
+
+.modal__mas-opciones {
+    display: flex;
+    flex-direction: column-reverse;
+}
 
 
 /*iconos*/
