@@ -4,6 +4,7 @@
     --bg-header: #212121e1;
     --bg-button: #323232;
     --bg-communidad-card: #212121;
+    --bg-color-modal: #00000080;
 
     --accion-hover: #4f4d4e;
     --accion-hover-2: #464444;
@@ -448,7 +449,7 @@ button.header-top-form__button-microphone {
 /* modals */
 
 .body-modal-left {
-    background-color: #474747c2;
+    background-color: var(--bg-color-modal);
     width: 100vw;
     height: 100vh;
     position: fixed;
