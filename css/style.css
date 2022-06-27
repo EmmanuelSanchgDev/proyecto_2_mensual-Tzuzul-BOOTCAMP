@@ -283,7 +283,7 @@ button.header-top-form__button-microphone {
 /* main */
 .conteiner-primary {
     grid-area: main;
-    padding: 2ch;
+    padding: 4ch 2ch;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -300,14 +300,15 @@ button.header-top-form__button-microphone {
 
 .card {
     width: 24%;
+    position: relative;
     /* min-width: 36rem; */
     /* height: 25rem; */
 }
 
 .card__conteiner-mini {
     width: 100%;
-    margin-bottom: 1rem;
     position: relative;
+    background-color: var(--bg-marco);
 }
 
 .card__mini {
@@ -319,7 +320,7 @@ button.header-top-form__button-microphone {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-    padding: 0 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
 .card__conteiner-image-channel {
@@ -605,14 +606,42 @@ button.header-top-form__button-microphone {
     left: 0;
 }
 
-.card__conteiner-mini:hover::before {
-    content: "";
+.card > * {
+    position: relative;
+    z-index: -10;
+}
+
+.card:hover {
+    transition-duration: 0.3s;
     transition-delay: 2s;
+    transform: scale(1.3);
+    z-index: 100;
+}
+.card:hover:first-child {
+    left: 3rem;
+}
+.card:hover:last-child {
+    right: 3rem;
+}
+/* .card > .card__conteiner-description-top {
+    z-index: 15;
+} */
+
+.card:hover .card__conteiner-mini::before {
+    content: "";
+    transition-duration: 0.3s;
+    transition-delay: 2.5s;
     visibility: hidden;
 }
-.card__conteiner-mini:hover .card__video {
-    transition-delay: 2s;
+.card:hover .card__conteiner-mini .card__video {
+    transition-duration: 0.3s;
+    transition-delay: 2.5s;
     visibility: visible;
+}
+
+.card:hover .card__conteiner-description-top {
+    transition-delay: 2s;
+    background-color: var(--bg-marco);
 }
 
 
