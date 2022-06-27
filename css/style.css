@@ -23,7 +23,7 @@
     --size-cuadrado: 4rem;
     --size-scroll-bar: 1.7rem;
     --size-title-video: 75%;
-    --ssize-subtitle-video: 70%;
+    --size-subtitle-video: 70%;
     
     --transition-time: 0.3s;
     
@@ -568,6 +568,16 @@ button.header-top-form__button-microphone {
 .modal__mas-opciones {
     display: flex;
     flex-direction: column-reverse;
+}
+
+.conteiner-modal-user {
+    position: absolute;
+    top: 12rem;
+    right: 0;
+    width: 35rem;
+    height: 90vh;
+    background-color: black;
+    color: var(--font-color-white);
 }
 
 
