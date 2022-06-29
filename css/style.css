@@ -301,8 +301,6 @@ button.header-top-form__button-microphone {
 .card {
     width: 24%;
     position: relative;
-    /* min-width: 36rem; */
-    /* height: 25rem; */
 }
 
 .card__conteiner-mini {
@@ -321,6 +319,15 @@ button.header-top-form__button-microphone {
     justify-content: space-between;
     margin-bottom: 0.5rem;
     padding: 1rem 0.5rem;
+}
+
+.card__conteiner-description-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
 }
 
 .card__conteiner-image-channel {
@@ -613,37 +620,65 @@ button.header-top-form__button-microphone {
 
 .card:hover {
     transition-duration: 0.3s;
-    transition-delay: 2s;
+    transition-delay: 1.5s;
     transform: scale(1.3);
-    z-index: 100;
+    z-index: 99;
 }
 .card:hover:first-child {
-    left: 3rem;
+    transform: scale(1.3) translateX(2rem);
 }
 .card:hover:last-child {
-    right: 3rem;
+    transform: scale(1.3) translateX(-2rem);
 }
-/* .card > .card__conteiner-description-top {
-    z-index: 15;
-} */
 
 .card:hover .card__conteiner-mini::before {
     content: "";
-    transition-duration: 0.3s;
-    transition-delay: 2.5s;
+    transition-delay: 2.1s;
     visibility: hidden;
 }
 .card:hover .card__conteiner-mini .card__video {
     transition-duration: 0.3s;
-    transition-delay: 2.5s;
+    transition-delay: 2.1s;
     visibility: visible;
 }
 
-.card:hover .card__conteiner-description-top {
-    transition-delay: 2s;
+.card__conteiner-description {
+    padding-bottom: 1rem;
+}
+
+.card:hover .card__conteiner-description {
+    transition-delay: 1.5s;
     background-color: var(--bg-marco);
 }
 
+/* .card:hover .card__conteiner-description-top {
+    transition-delay: 1.5s;
+    background-color: var(--bg-marco);
+} */
+
+.card:hover  .card__conteiner-description-bottom{ /*hace hover despues*/
+    transition-delay: 1.5s;
+    visibility: visible;
+    background-color: var(--bg-marco);
+    padding-bottom: 1rem;
+}
+
+.card__button-description-bottom {
+    width: 90%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-button);
+    border: none;
+    margin-bottom: 0.3rem;
+    color: var(--font-color-gray);
+    cursor: pointer;
+}
+
+.card__button-description-bottom:hover {
+    background-color: var(--accion-hover);
+}
 
 
 /*iconos*/
