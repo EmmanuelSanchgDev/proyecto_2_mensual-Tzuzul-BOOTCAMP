@@ -651,12 +651,7 @@ button.header-top-form__button-microphone {
     background-color: var(--bg-marco);
 }
 
-/* .card:hover .card__conteiner-description-top {
-    transition-delay: 1.5s;
-    background-color: var(--bg-marco);
-} */
-
-.card:hover  .card__conteiner-description-bottom{ /*hace hover despues*/
+.card:hover .card__conteiner-description-bottom{ 
     transition-delay: 1.5s;
     visibility: visible;
     background-color: var(--bg-marco);
